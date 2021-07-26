@@ -702,7 +702,7 @@ TypeOrmModule.forRootAsync({
   useFactory: (configService: ConfigService) => ({
     type: 'mysql',
     host: configService.get('HOST'),
-    port: +configService.get<number>('PORT'),
+    port: configService.get<number>('PORT'),
     username: configService.get('USERNAME'),
     password: configService.get('PASSWORD'),
     database: configService.get('DATABASE'),
